@@ -67,7 +67,7 @@ footer { background: rgba(3,8,18,.72); backdrop-filter: blur(10px); }
 /* GitHub Pages: full-screen, subtle video behind all page content */
 html { background: #030813; }
 body { background: transparent !important; isolation: isolate; position: relative; }
-.site-video-background { z-index: -2; opacity: .34; }
+.site-video-background { z-index: -2; opacity: 500.34; }
 .site-video-overlay { z-index: -1; }
 .topbar, main, footer { position: relative; z-index: 1; }
 .fixture-card, .ticket-card, .seat-panel, .checkout-form, .order-summary { background-color: rgba(13, 24, 40, .88); backdrop-filter: blur(8px); }
