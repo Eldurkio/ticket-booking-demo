@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Matchday | Bayern Munich vs Ajax — Kenya</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <video class="site-video-background" id="teamVideo" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
+  <div class="site-video-overlay" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 57 17v30L32 61 7 47V17z" fill="none" stroke="currentColor" stroke-width="4"/><path d="m32 15 12 8-5 14H25l-5-14zM20 23 9 28m35-5 11 5M25 37l-5 12m19-12 5 12M9 36l11 1m24-1 11-1M20 49l12 7 12-7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><span>MATCHDAY</span></a>
+    <nav><a href="#fixture">Match</a><a href="#tickets">Tickets</a><a href="#checkout">Checkout</a></nav>
+    <span class="demo-label">MATCHDAY · KENYA</span>
+  </header>
+
+  <main>
+    <section class="hero hero-video" id="fixture">
+      <div class="hero-copy">
+        <p class="eyebrow">KENYA FOOTBALL EVENT · 2027</p>
+        <h1>ONE NIGHT.<br><span>TWO GIANTS.</span></h1>
+        <p class="hero-intro">Bayern Munich vs Ajax Amsterdam. A European football spectacle imagined for Nairobi. Explore the Matchday experience and ticket categories.</p>
+        <div class="fixture-card">
+          <div class="team"><div class="team-badge home-team-badge"><img id="bayernLogo" alt="Bayern Munich badge" hidden><span id="bayernFallback">FCB</span></div><strong id="homeTeam">Bayern Munich</strong></div>
+          <div class="versus"><span>VS</span><small>UPCOMING FIXTURE</small></div>
+          <div class="team"><div class="team-badge away-team-badge"><img id="ajaxLogo" alt="Ajax Amsterdam badge" hidden><span id="ajaxFallback">AFC</span></div><strong id="awayTeam">Ajax Amsterdam</strong></div>
+          <div class="fixture-details"><span id="matchDate">Tuesday, 5 January 2027</span><span id="matchTime">7:00 PM EAT</span><span id="matchVenue">Raila Odinga Stadium (Talanta Sports City), Nairobi, Kenya</span><span class="kenya-clock">KENYA TIME <strong id="kenyaClock">--:--:-- EAT</strong></span></div>
+        </div>
+        <p class="notice"><strong>Event status:</strong> match date, kick-off time, venue arrangements, ticket allocations and permission to sell are not verified here. No payment should be accepted until these details are officially confirmed.</p>
+      </div>
+      <div class="hero-art hero-video-caption" aria-label="Matchup feature"><div class="club-crest crest-bayern"><img id="heroBayernLogo" alt="Bayern Munich crest" hidden><span>FC BAYERN</span></div><div class="hero-versus">VS</div><div class="club-crest crest-ajax"><img id="heroAjaxLogo" alt="Ajax Amsterdam crest" hidden><span>AJAX</span></div><div class="stadium-lights" aria-hidden="true"></div><div class="art-caption">RAILA ODINGA<br>STADIUM</div><p class="video-note">BAYERN <span>×</span> AJAX<br><span>5 JANUARY 2027 · NAIROBI</span></p></div>
+    </section>
+
+    <section class="section" id="tickets">
+      <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR SIDE OF HISTORY</p><h2>Tickets & sections</h2></div><p>Prices in Kenyan shillings (KES)</p></div>
+      <div class="ticket-grid ticket-grid-two">
+        <button class="ticket-card" data-tier="VIP" type="button"><span class="ticket-top"><span class="ticket-icon">♛</span><span class="availability" id="vipAvailability">15,000 seats available</span></span><span class="tier">VIP</span><span class="price">KES 30,000</span><span class="description">Premium matchday experience. Limited allocation.</span><span class="select-label">Select VIP <span>↗</span></span></button>
+        <button class="ticket-card" data-tier="Regular" type="button"><span class="ticket-top"><span class="ticket-icon">▣</span><span class="availability" id="regularAvailability">45,000 seats available</span></span><span class="tier">Regular</span><span class="price">KES 10,000</span><span class="description">Be part of the atmosphere from the stands.</span><span class="select-label">Select Regular <span>↗</span></span></button>
+      </div>
+      <div class="seat-panel">
+        <div><p class="eyebrow">SEAT SELECTION</p><h3>Choose a preferred seat</h3><p class="muted">Choose a preference if available. The ticket category inventory is shown above; individual seat selection must be confirmed by the event organizer.</p></div>
+        <div class="seat-map" id="seatMap" aria-label="Sample seat choices"></div>
+        <p id="seatStatus" class="seat-status">No seat selected.</p>
+      </div>
+    </section>
+
+    <section class="section checkout-section" id="checkout">
+      <div class="section-heading"><div><p class="eyebrow">SECURE CHECKOUT</p><h2>Payment details</h2></div><p>M-Pesa · Bank card</p></div>
+      <div class="checkout-layout">
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-grid">
+            <label>Full name<input id="customerName" name="customerName" autocomplete="name" required placeholder="Your full name"></label>
+            <label>Email address<input id="customerEmail" name="customerEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Phone number<input id="customerPhone" name="customerPhone" autocomplete="tel" placeholder="+254 7XX XXX XXX" required></label>
+            <label>Number of tickets<select id="quantity" name="quantity"><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option><option value="4">4 tickets</option><option value="5">5 tickets</option></select></label>
+          </div>
+          <div class="payment-heading"><h3>Payment method</h3><span>M-Pesa · Bank card</span></div>
+          <div class="payment-options">
+            <label class="payment-option"><input type="radio" name="paymentMethod" value="mpesa" checked><span class="payment-logo mpesa-logo">M</span><span><strong>M-Pesa</strong><small>Pay by STK push to your phone</small></span></label>
+            <label class="payment-option"><input type="radio" name="paymentMethod" value="card"><span class="payment-logo card-logo">▰</span><span><strong>Bank card</strong><small>Visa / Mastercard hosted checkout</small></span></label>
+          </div>
+          <div class="method-fields"><p class="method-hint" id="paymentHint">M-Pesa checkout requires a configured Safaricom Daraja merchant account. Your ticket is issued only after a verified payment callback.</p></div>
+          <label class="consent"><input type="checkbox" id="acknowledge" required><span>I confirm these attendee details are accurate and understand ticket sales must be enabled only after event details, ticket authorization, prices, and refund terms are confirmed.</span></label>
+          <button class="primary-button" type="submit">Continue to payment <span>→</span></button>
+          <p class="secure-note">🔒 Card details must be entered only on a secure payment-provider page. No ticket is issued until payment is verified.</p>
+        </form>
+        <aside class="order-summary">
+          <p class="eyebrow">YOUR ORDER</p><h3>Matchday ticket</h3>
+          <div class="summary-fixture"><span id="summaryHome">Bayern Munich</span><span>VS</span><span id="summaryAway">Ajax Amsterdam</span></div>
+          <p class="muted">Match details subject to organizer confirmation</p>
+          <div class="summary-line"><span>Ticket type</span><strong id="summaryTier">Not selected</strong></div>
+          <div class="summary-line"><span>Seat</span><strong id="summarySeat">Not selected</strong></div>
+          <div class="summary-line"><span>Quantity</span><strong id="summaryQty">1</strong></div>
+          <div class="summary-line"><span>Price per ticket</span><strong id="summaryPrice">KES 0</strong></div>
+          <div class="summary-line total"><span>Order total</span><strong id="summaryTotal">KES 0</strong></div>
+          <div class="summary-foot">Tickets are confirmed only after a verified payment notification and successful booking validation.</div>
+        </aside>
+      </div>
+      <div id="result" class="result hidden" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 57 17v30L32 61 7 47V17z" fill="none" stroke="currentColor" stroke-width="4"/><path d="m32 15 12 8-5 14H25l-5-14zM20 23 9 28m35-5 11 5M25 37l-5 12m19-12 5 12M9 36l11 1m24-1 11-1M20 49l12 7 12-7" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><span>MATCHDAY</span></a><p>Ticket support: worldify.ke@gmail.com · Event details subject to organizer confirmation · Nairobi, Kenya</p></footer>
+  <script src="./app.js"></script>
+</body>
+</html>
